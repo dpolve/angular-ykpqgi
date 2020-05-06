@@ -11,12 +11,15 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { RegioniComponent } from './regioni/regioni.component';
 import { ProvinceComponent } from './province/province.component';
+import { RegioniService } from './regioni.service';
+import { ProvinceService } from './province.service';
 
 @NgModule({
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports:      [ BrowserModule, FormsModule, FontAwesomeModule,NgbModule ],
-  declarations: [ AppComponent, , RegioniComponent, ProvinceComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent, RegioniComponent, ProvinceComponent ],
+  bootstrap:    [ AppComponent ],
+  providers: [RegioniService, ProvinceService]
 })
 export class AppModule {
   constructor(library: FaIconLibrary) {
