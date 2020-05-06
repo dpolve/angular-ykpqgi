@@ -4,7 +4,7 @@ import { Regioni } from './regioni.model'
 providedIn: 'root'
 })
 export class RegioniService {
-dati_regioni: Regioni[] = [
+  datiRegioni: Regioni[] = [
     {
         "data": "2020-05-05T17:00:00",
         "stato": "ITA",
@@ -467,7 +467,13 @@ dati_regioni: Regioni[] = [
         "note_it": "",
         "note_en": ""
     }
-]
-  constructor() { }
+  ]
 
+  constructor() { 
+    let regioni = new Regioni();
+  }
+
+  getDatiRegioni(): Regioni[] {
+    return this.datiRegioni;
+  }
 }

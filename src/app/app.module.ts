@@ -13,11 +13,12 @@ import { RegioniComponent } from './regioni/regioni.component';
 import { ProvinceComponent } from './province/province.component';
 import { RegioniService } from './regioni.service';
 import { ProvinceService } from './province.service';
+import { RegioniListComponent } from './regioni-list/regioni-list.component';
 
 @NgModule({
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports:      [ BrowserModule, FormsModule, FontAwesomeModule,NgbModule ],
-  declarations: [ AppComponent, RegioniComponent, ProvinceComponent ],
+  declarations: [ AppComponent, RegioniComponent, ProvinceComponent, RegioniListComponent ],
   bootstrap:    [ AppComponent ],
   providers: [RegioniService, ProvinceService]
 })
