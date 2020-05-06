@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
@@ -13,8 +13,13 @@ import { RegioniComponent } from './regioni/regioni.component';
 import { ProvinceComponent } from './province/province.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  imports:      [ BrowserModule, FormsModule, FontAwesomeModule,NgbModule ],
   declarations: [ AppComponent, , RegioniComponent, ProvinceComponent ],
   bootstrap:    [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+library.addIconPacks(fas, far);
+}
+ }
